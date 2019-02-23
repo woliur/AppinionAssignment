@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/product_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            app:ms_enableFloatingLabel="true"
+            app:ms_floatingLabelColor="#00CCCC"
+            app:ms_floatingLabelText="Product Group"
+            app:ms_hint="Product Group"
+            app:ms_hintColor="#00CCCC">
+
+        </fr.ganfra.materialspinner.MaterialSpinner>
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_spinner"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:orientation="horizontal">
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/literature_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/textborder"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelColor="#00CCCC"
+                app:ms_floatingLabelText="Literature"
+                app:ms_hint="Literature"
+                app:ms_hintColor="#00CCCC">
+
+            </fr.ganfra.materialspinner.MaterialSpinner>
+
+            <TextView
+                android:id="@+id/tv_literature"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/textborder"
+                android:gravity="center"
+                android:hint="00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear1"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:orientation="horizontal">
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/physician_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/textborder"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelColor="#00CCCC"
+                app:ms_floatingLabelText="Physician Sample"
+                app:ms_hint="Physician Sample"
+                app:ms_hintColor="#00CCCC">
+
+            </fr.ganfra.materialspinner.MaterialSpinner>
+
+            <TextView
+                android:id="@+id/tv_physician"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/textborder"
+                android:gravity="center"
+                android:hint="00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear2"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:orientation="horizontal">
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/gift_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/textborder"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelColor="#00CCCC"
+                app:ms_floatingLabelText="Gift"
+                app:ms_hint="Gift"
+                app:ms_hintColor="#00CCCC">
+
+            </fr.ganfra.materialspinner.MaterialSpinner>
+
+            <TextView
+                android:id="@+id/tv_gift"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/textborder"
+                android:gravity="center"
+                android:hint="00" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/accompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="#27293e"
+            android:layout_marginHorizontal="15dp"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_accompanied_with"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Accompanied with"
+                android:textColorHint="#00CCCC" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accompany"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="#27293e"
+            android:layout_marginHorizontal="15dp"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Accompanied with"
+                android:textColorHint="#00CCCC"
+                android:gravity="start"
+                android:minLines="1"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/remark"
+            android:layout_alignRight="@id/remark"
+            android:text="submit"
+            android:textColor="#FFFFFF"
+            android:background="#00a7a7"/>
+
+    </RelativeLayout>
+
+</ScrollView>
